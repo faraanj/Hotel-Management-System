@@ -1,0 +1,67 @@
+<mat-drawer-container>
+  <mat-drawer mode="side" [opened]="sideBarOpen">
+    <app-sidenav></app-sidenav>
+  </mat-drawer>
+  <mat-drawer-content>
+    <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+    <div class="container-fluid">
+      <div class="page__box">New Room</div>
+      <div class="page__content shadow">
+        <div class="page__content-data">
+          <mat-toolbar color="primary">
+            <mat-toolbar-row fxLayout="row">
+              <span class="title-center">Enter Room Details</span>
+            </mat-toolbar-row>
+          </mat-toolbar>
+          <mat-dialog-content class="mat-typography">
+            <form [formGroup]="roomAddForm">
+              <div fxFlex fxLayout="column">
+                <mat-form-field appearance="fill" fxFlex [style.width.%]="100">
+                  <mat-label>Room Number</mat-label>
+                  <input matInput formControlName="roomNumber" required />
+                  <mat-error *ngIf="roomAddForm.controls.roomNumber.touched && roomAddForm.controls.roomNumber.invalid">
+                    <span *ngIf="roomAddForm.controls.roomNumber.errors.required">This field is mandatory</span>
+                    <span *ngIf="roomAddForm.controls.roomNumber.errors.pattern">This field is mandatory</span>
+                  </mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="fill" fxFlex [style.width.%]="100">
+                  <mat-label>Room Type</mat-label>
+                  <input matInput formControlName="roomType" required />
+                  <mat-error *ngIf="roomAddForm.controls.roomType.touched && roomAddForm.controls.roomType.invalid">
+                    <span *ngIf="roomAddForm.controls.roomType.errors.required">This field is mandatory</span>
+                    <span *ngIf="roomAddForm.controls.roomType.errors.pattern">This field is mandatory</span>
+                  </mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="fill" fxFlex [style.width.%]="100">
+                  <mat-label>Room Price</mat-label>
+                  <input matInput formControlName="price" required />
+                  <mat-error *ngIf="roomAddForm.controls.price.touched && roomAddForm.controls.price.invalid">
+                    <span *ngIf="roomAddForm.controls.price.errors.required">This field is mandatory</span>
+                    <span *ngIf="roomAddForm.controls.price.errors.pattern">This field is mandatory</span>
+                  </mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="fill" fxFlex [style.width.%]="100">
+                  <mat-label>Room Description</mat-label>
+                  <input matInput formControlName="roomDescription" required />
+                  <mat-error *ngIf="roomAddForm.controls.roomDescription.touched && roomAddForm.controls.roomDescription.invalid">
+                    <span *ngIf="roomAddForm.controls.roomDescription.errors.required">This field is mandatory</span>
+                    <span *ngIf="roomAddForm.controls.roomDescription.errors.pattern">This field is mandatory</span>
+                  </mat-error>
+                </mat-form-field>
+              </div>
+            </form>
+          </mat-dialog-content>
+
+          <mat-dialog-content>
+            <mat-dialog-actions class="button-position">
+              <button mat-raised-button color="primary" type="submit" (click)="handleSubmit()"
+                      [disabled]="!(roomAddForm.valid && roomAddForm.dirty)">
+                Save
+              </button>
+            </mat-dialog-actions>
+          </mat-dialog-content>
+        </div>
+      </div>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

@@ -1,0 +1,94 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+mat-drawer {
+  width: 260px;
+  background: #0f172a;
+}
+
+mat-drawer-container {
+  height: 100%;
+}
+
+.container-fluid {
+  background: #f1f5f9;
+  padding: 0 1rem;
+}
+
+.page__box {
+  min-height: 120px;
+  background: #1e293b;
+  margin: 0 -1rem;
+  font-size: 36px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page__content {
+  min-height: calc(100vh - 178px);
+  border-radius: 10px;
+  margin-top: -2rem;
+  background: white;
+  color: black;
+  font-size: 2rem;
+  position: relative;
+  padding: 2rem;
+}
+
+.room-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.mat-grid-list {
+  /* Set the overall width and margin */
+  width: 100%;
+  margin: 0 auto;
+}
+
+.mat-grid-tile {
+  /* Adjust the tile size and spacing */
+  width: 80%; /* Full width of the container */
+  height: auto; /* Adjust as needed */
+  padding: 16px; /* Add spacing around each tile */
+}
+
+
+.mat-mdc-card {
+  /* Set the card width */
+  width: 80%;
+  height: 80%;
+  margin: 16px;
+  background-color: rgb(0, 148, 255, 0.2);
+}
+/* Style the buttons within the card actions */
+.mat-card-actions button {
+  margin-right: 8px;
+}
+
+.card_text {
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.post-room-btn {
+  margin-top: 4.375rem;
+  margin-left: 30px;
+}
+
+.icon {
+  font-size: 1.25rem;
+}
+
+.pagination {
+  float: right;
+  margin-right: 10.625rem;
+}

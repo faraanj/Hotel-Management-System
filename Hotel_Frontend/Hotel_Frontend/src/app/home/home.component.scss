@@ -1,0 +1,79 @@
+
+/*Adds a light blue transparent wrap that surrounds the title*/
+.wrapper {
+  height: 65px;
+  width: 100%;
+  align-items: center;
+  justify-content: left;
+  padding: 0 20px;
+  background-color: rgba(174, 217, 217, 0.8);
+}
+
+a.logo {
+  margin-right: auto;
+  padding-top:15px;
+}
+
+
+ul {
+  display: flex; /* Add this line to make the list items horizontally placed */
+  flex-direction: row; /* Add this line to ensure the list items are placed in a row */
+  justify-content: space-between; /* Add this line to evenly distribute the list items horizontally */
+}
+
+
+a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 1.25em;
+}
+
+/*sticks to the top of the page even as we scroll down*/
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+}
+
+/*makes the icon align with text*/
+.mat-icon {
+  vertical-align: middle;
+}
+
+/*creates background image*/
+.background-image {
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5)), url("../../assets/img/bg_image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  list-style-type: none;
+  padding-left: 40px;
+}
+
+.register:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  background-color: rgba(0, 0, 0, 0.2); /* Add this line to darken the background color */
+}
+
+.login:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  background-color: rgba(0, 0, 0, 0.2); /* Add this line to darken the background color */
+}
+
+.navbar-fixed-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-right: 75px;
+}

@@ -1,0 +1,49 @@
+<mat-nav-list *ngIf="isUser">
+  <div class="logo py-4">
+    <img src="../../assets/img/logo.png" alt="Company Logo" />
+  </div>
+  <mat-divider></mat-divider>
+  <h2 matSubheader class="mt-2 content">APPLICATIONS</h2>
+
+  <div class="hovers active">
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/hotel">
+      <div class="content">
+        <mat-icon>dashboard</mat-icon> Dashboard
+      </div>
+    </a>
+  </div>
+
+  <div class="hovers">
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/booking">
+      <div class="content hovers"><mat-icon>hotel</mat-icon> Bookings</div>
+    </a>
+  </div>
+</mat-nav-list>
+
+<mat-nav-list *ngIf="isAdmin">
+  <div class="logo py-4">
+    <img src="../../assets/img/logo.png" alt="Company Logo" />
+  </div>
+  <mat-divider></mat-divider>
+  <h2 matSubheader class="mt-2 content">APPLICATIONS</h2>
+
+  <div class="hovers">
+  <a mat-list-item routerLinkActive="list-item-active" routerLink="/new">
+    <div class="content hovers"><mat-icon>add_box</mat-icon> Add Room</div>
+  </a>
+  </div>
+
+  <div class="hovers active">
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/room">
+      <div class="content">
+        <mat-icon>room</mat-icon> Rooms
+      </div>
+    </a>
+  </div>
+
+  <div class="hovers">
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/reservation">
+      <div class="content hovers"><mat-icon>apartment</mat-icon> Reservation</div>
+    </a>
+  </div>
+</mat-nav-list>

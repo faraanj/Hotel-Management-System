@@ -1,0 +1,61 @@
+<mat-drawer-container>
+  <mat-drawer mode="side" [opened]="sideBarOpen">
+    <app-sidenav></app-sidenav>
+  </mat-drawer>
+  <mat-drawer-content>
+    <app-header (toggleSidebarForMe)="sideBarToggler()"></app-header>
+    <div class="container-fluid">
+      <div class="page__box">Bookings</div>
+      <div class="page__content shadow">
+          <mat-table [dataSource]="reservations" matSort class="mat-elevation-z8">
+
+            <!-- Room Name Column -->
+            <ng-container matColumnDef="roomName">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Room Name </mat-header-cell>
+              <mat-cell *matCellDef="let reservation"> Room No {{ reservation.room.roomNumber }} </mat-cell>
+            </ng-container>
+
+            <!-- Room Type Column -->
+            <ng-container matColumnDef="roomType">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Room Type </mat-header-cell>
+              <mat-cell *matCellDef="let reservation"> {{ reservation.room.roomType }} </mat-cell>
+            </ng-container>
+
+            <!-- Check In Date Column -->
+            <ng-container matColumnDef="checkInDate">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Check In Date </mat-header-cell>
+              <mat-cell *matCellDef="let reservation"> {{ reservation.checkInDate | date }} </mat-cell>
+            </ng-container>
+
+            <!-- Check Out Date Column -->
+            <ng-container matColumnDef="checkOutDate">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Check Out Date </mat-header-cell>
+              <mat-cell *matCellDef="let reservation"> {{ reservation.checkOutDate | date }} </mat-cell>
+            </ng-container>
+
+            <!-- Price Column -->
+            <ng-container matColumnDef="price">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Price </mat-header-cell>
+              <mat-cell *matCellDef="let reservation"> {{ reservation.price | currency }} </mat-cell>
+            </ng-container>
+
+            <!-- Status Column -->
+            <ng-container matColumnDef="status">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Status </mat-header-cell>
+              <mat-cell *matCellDef="let reservation" [@statusChange]="reservation.reservationStatus">
+              {{ reservation.reservationStatus }} </mat-cell>
+            </ng-container>
+
+
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+          </mat-table>
+
+          <div class="pagination">
+            <mat-paginator [length]="total" [pageSize]="5" [pageIndex]="currentPage" (page)="pageIndexChange($event)">
+            </mat-paginator>
+        </div>
+      </div>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>

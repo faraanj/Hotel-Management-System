@@ -1,0 +1,27 @@
+@import "../dashboard/dashboard.component.scss";
+
+
+/* Table and Paginator */
+.mat-elevation-z8 {
+  box-shadow: 0 6px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.mat-table {
+  width: 100%;
+  overflow: auto;
+}
+
+.mat-header-cell, .mat-cell {
+  padding: 8px;
+  text-align: left;
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.mat-paginator {
+  background: transparent;
+}

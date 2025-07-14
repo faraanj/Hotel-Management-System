@@ -1,0 +1,54 @@
+@import "../dashboard/dashboard.component.scss";
+.room-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.mat-grid-list {
+  /* Set the overall width and margin */
+  width: 100%;
+  margin: 0 auto;
+}
+
+.mat-grid-tile {
+  /* Adjust the tile size and spacing */
+  width: 80%; /* Full width of the container */
+  height: auto; /* Adjust as needed */
+  padding: 16px; /* Add spacing around each tile */
+}
+
+
+.mat-mdc-card {
+  /* Set the card width */
+  width: 80%;
+  height: 80%;
+  margin: 16px;
+  background-color: rgb(0, 148, 255, 0.2);
+
+}
+/* Style the buttons within the card actions */
+.mat-card-actions button {
+  margin-right: 8px;
+}
+
+.card_text {
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.post-room-btn {
+  margin-top: 4.375rem;
+  margin-left: 30px;
+}
+
+.icon {
+  font-size: 1.25rem;
+}
+
+.pagination {
+  float: right;
+  margin-right: 10.625rem;
+}

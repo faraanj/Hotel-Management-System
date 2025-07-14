@@ -1,0 +1,66 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+mat-drawer {
+  width: 260px;
+  background: #0f172a;
+}
+
+mat-drawer-container {
+  height: 100%;
+}
+
+.container-fluid {
+  background: #f1f5f9;
+  padding: 0 1rem;
+}
+
+.page__box {
+  min-height: 120px;
+  background: #1e293b;
+  margin: 0 -1rem;
+  font-size: 36px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page__content {
+  min-height: calc(100vh - 178px);
+  border-radius: 10px;
+  margin-top: -2rem;
+  background: white;
+  color: black;
+  font-size: 2rem;
+  position: relative;
+}
+
+.page__content-data {
+  top: 50%;
+  left: 40%;
+  transform: translate(-30%, -45%);
+  position: absolute;
+  text-align: center;
+}
+.mat-tool-bar{
+    width: auto;
+}
+
+.title-center{
+    flex: 1, 1, auto;
+    text-align: center;
+}
+
+mat-form-field{
+    padding: 5px
+}
+
+.button-position {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
